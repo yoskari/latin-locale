@@ -61,3 +61,17 @@ you can do things like this.
 $ LC_TIME=la date +"hodie est die %Od mensis %B MM%Oy"
 hodie est die XXIV mensis Aprilis MMXXIV
 ```
+
+I took the names of weekdays and months straight from the Unicode locale summary,
+so Sunday is *dies Solis* (not dies Dominica) and Saturday is *dies Saturni*
+(not dies Sabbati) due to the latter (post AD 380) forms being described as alternative 
+variants in the Unicode data. Months are by default in the genetive case, but have
+alternative variants in the nominative case, as is the case in for example
+practically all of the Slavic language locales.
+```
+$ LC_TIME=la date --date="1/1/2000" +%B
+Ianuarii
+$ LC_TIME=la date --date="1/1/2000" +%OB
+Ianuarius
+```
+
