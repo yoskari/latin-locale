@@ -1,0 +1,145 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Latin Language Locale
+% Source: Oskari Ylönen
+% Email: oskari.ylonen@iki.fi
+% Tel: 
+% Fax: 
+% Language: la
+% Revision: 1.0
+% Date: 2024-4-22
+% Users: general
+
+LC_IDENTIFICATION
+title      "Latin language locale"
+source     ""
+address    ""
+contact    ""
+email      "bug-glibc-locales@gnu.org"
+tel        ""
+fax        ""
+language   "Latin"
+territory  ""
+revision   "draft"
+date       "2024-4-22"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_MEASUREMENT
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+END LC_IDENTIFICATION
+
+LC_COLLATE
+copy "iso14651_t1"
+END LC_COLLATE
+
+LC_CTYPE
+copy "i18n"
+END LC_CTYPE
+
+LC_MONETARY
+copy "i18n"
+END LC_MONETARY
+
+LC_NUMERIC
+copy "i18n"
+END LC_NUMERIC
+
+LC_TIME
+abday    "Sol";"Lun";"Mar";"Mer";"Iov";"Ven";"Sat"
+day      "dies Solis";/
+         "dies Lunae";/
+         "dies Martis";/
+         "dies Mercurii";/
+         "dies Iovi";/
+         "dies Veneris";/
+         "dies Saturni"
+abmon    "Ian";/
+         "Feb";/
+         "Mar";/
+         "Apr";/
+         "Mai";/
+         "Iun";/
+         "Iul";/
+         "Aug";/
+         "Sep";/
+         "Oct";/
+         "Nov";/
+         "Dec"
+% Genetive case
+mon      "Ianuarii";/
+         "Februarii";/
+         "Martii";/
+         "Aprilis";/
+         "Maii";/
+         "Iunii";/
+         "Iulii";/
+         "Augusti";/
+         "Septembris";/
+         "Octobris";/
+         "Novembris";/
+         "Decembris"
+% Nominative case
+alt_mon  "Ianuarius";/
+         "Februarius";/
+         "Martius";/
+         "Aprilis";/
+         "Maius";/
+         "Iunius";/
+         "Iulius";/
+         "Augustus";/
+         "September";/
+         "October";/
+         "November";/
+         "December"
+d_t_fmt  "%a, die %d %B %Y %T"
+d_fmt    "%F"
+t_fmt    "%T"
+am_pm    "a.m.";"p.m."
+t_fmt_ampm "%I:%M:%S %p"
+date_fmt "%a %F %T %Z"
+week     7;19971130;4
+END LC_TIME
+
+LC_MESSAGES
+yesexpr "^[+1SsYy]"
+noexpr  "^[-0Nn]"
+yesstr  "sic"
+nostr   "non"
+END LC_MESSAGES
+
+LC_PAPER
+copy "i18n"
+END LC_PAPER
+
+LC_TELEPHONE
+copy "i18n"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "i18n"
+END LC_MEASUREMENT
+
+LC_NAME
+copy "i18n"
+END LC_NAME
+
+LC_ADDRESS
+copy "i18n"
+END LC_ADDRESS
