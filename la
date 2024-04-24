@@ -62,6 +62,27 @@ copy "i18n"
 END LC_NUMERIC
 
 LC_TIME
+alt_digits  "N";"I";"II";"III";"IV";"V";/
+            "VI";"VII";"VIII";"IX";"X";/
+            "XI";"XII";"XIII";"XIV";"XV";/
+            "XVI";"XVII";"XVIII";"XIX";"XX";/
+            "XXI";"XXII";"XXIII";"XXIV";"XXV";/
+            "XXVI";"XXVII";"XXVIII";"XXIX";"XXX";/
+            "XXXI";"XXXII";"XXXIII";"XXXIV";"XXXV";/
+            "XXXVI";"XXXVII";"XXXVIII";"XXXIX";"XL";/
+            "XLI";"XLII";"XLIII";"XLIV";"XLV";/
+            "XLVI";"XLVII";"XLVIII";"XLIX";"L";/
+            "LI";"LII";"LIII";"LIV";"LV";/
+            "LVI";"LVII";"LVIII";"LIX";"LX";/
+            "LXI";"LXII";"LXIII";"LXIV";"LXV";/
+            "LXVI";"LXVII";"LXVIII";"LXIX";"LXX";/
+            "LXXI";"LXXII";"LXXIII";"LXXIV";"LXXV";/
+            "LXXVI";"LXXVII";"LXXVIII";"LXXIX";"LXXX";/
+            "LXXXI";"LXXXII";"LXXXIII";"LXXXIV";"LXXXV";/
+            "LXXXVI";"LXXXVII";"LXXXVIII";"LXXXIX";"XC";/
+            "XCI";"XCII";"XCIII";"XCIV";"XCV";/
+            "XCVI";"XCVII";"XCVIII";"XCIX"
+
 abday    "Sol";"Lun";"Mar";"Mer";"Iov";"Ven";"Sat"
 day      "dies Solis";/
          "dies Lunae";/
@@ -108,7 +129,7 @@ alt_mon  "Ianuarius";/
          "October";/
          "November";/
          "December"
-d_t_fmt  "%a, die %d %B %Y %T"
+d_t_fmt  "%a %d %b %Y %T"
 d_fmt    "%F"
 t_fmt    "%T"
 am_pm    "a.m.";"p.m."
