@@ -59,5 +59,5 @@ although they are not used by default in any formatting. But if you want to
 you can do things like this.
 ```
 $ LC_TIME=la date +"hodie est die %Od mensis %B MM%Oy"
-die XXIV mensis Aprilis MMXXIV
+hodie est die XXIV mensis Aprilis MMXXIV
 ```
