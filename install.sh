@@ -5,12 +5,18 @@ if [ $EUID != 0 ]; then
 	exit
 fi
 set -x
-localedef -i la -f UTF-8 la.UTF-8 -c
+
+locale=la
+if [ $1 ]; then
+	locale=$1
+fi
+
+localedef -i $locale -f UTF-8 $locale.UTF-8 -c
 
 i18n=/usr/share/i18n
-cp la $i18n/locales/la
-if [ -z "$(grep 'la UTF-8' $i18n/SUPPORTED)" ]; then
-	sed '308 i la UTF-8 \\' $i18n/SUPPORTED > SUPPORTED
+cp $locale $i18n/locales/$locale
+if [ -z "$(grep "$locale UTF-8" $i18n/SUPPORTED)" ]; then
+	sed "308 i $locale UTF-8 \\" $i18n/SUPPORTED > SUPPORTED
 	if [ $(wc -l SUPPORTED | sed 's/ .*//g') -gt 400 ]; then
 		mv SUPPORTED $i18n/SUPPORTED
 	else
@@ -18,8 +24,8 @@ if [ -z "$(grep 'la UTF-8' $i18n/SUPPORTED)" ]; then
 	fi
 fi
 
-if [ -z "$(grep 'la UTF-8' /etc/locale.gen)" ]; then
-	sed '314 i la UTF-8' /etc/locale.gen > locale.gen
+if [ -z "$(grep "$locale UTF-8" /etc/locale.gen)" ]; then
+	sed "314 i $locale UTF-8" /etc/locale.gen > locale.gen
 	if [ $(wc -l locale.gen | sed 's/ .*//g') -gt 400 ]; then
 		mv locale.gen /etc/locale.gen
 	else
