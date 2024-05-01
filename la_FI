@@ -1,0 +1,171 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Latin Language Locale for Finland
+% Example of a more opiniated custom Latin locale
+
+LC_IDENTIFICATION
+title      "Latin language locale for Finland"
+source     ""
+address    ""
+contact    ""
+email      "bug-glibc-locales@gnu.org"
+tel        ""
+fax        ""
+language   "Latin"
+territory  ""
+revision   "draft"
+date       "2024-4-22"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_MEASUREMENT
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+END LC_IDENTIFICATION
+
+LC_COLLATE
+copy "fi_FI"
+END LC_COLLATE
+
+LC_CTYPE
+copy "fi_FI"
+END LC_CTYPE
+
+LC_MONETARY
+copy "fi_FI"
+END LC_MONETARY
+
+LC_NUMERIC
+copy "fi_FI"
+END LC_NUMERIC
+
+LC_TIME
+alt_digits  "N";"I";"II";"III";"IV";"V";/
+            "VI";"VII";"VIII";"IX";"X";/
+            "XI";"XII";"XIII";"XIV";"XV";/
+            "XVI";"XVII";"XVIII";"XIX";"XX";/
+            "XXI";"XXII";"XXIII";"XXIV";"XXV";/
+            "XXVI";"XXVII";"XXVIII";"XXIX";"XXX";/
+            "XXXI";"XXXII";"XXXIII";"XXXIV";"XXXV";/
+            "XXXVI";"XXXVII";"XXXVIII";"XXXIX";"XL";/
+            "XLI";"XLII";"XLIII";"XLIV";"XLV";/
+            "XLVI";"XLVII";"XLVIII";"XLIX";"L";/
+            "LI";"LII";"LIII";"LIV";"LV";/
+            "LVI";"LVII";"LVIII";"LIX";"LX";/
+            "LXI";"LXII";"LXIII";"LXIV";"LXV";/
+            "LXVI";"LXVII";"LXVIII";"LXIX";"LXX";/
+            "LXXI";"LXXII";"LXXIII";"LXXIV";"LXXV";/
+            "LXXVI";"LXXVII";"LXXVIII";"LXXIX";"LXXX";/
+            "LXXXI";"LXXXII";"LXXXIII";"LXXXIV";"LXXXV";/
+            "LXXXVI";"LXXXVII";"LXXXVIII";"LXXXIX";"XC";/
+            "XCI";"XCII";"XCIII";"XCIV";"XCV";/
+            "XCVI";"XCVII";"XCVIII";"XCIX"
+
+abday    "Dom";"Lun";"Mar";"Mer";"Iov";"Ven";"Sab"
+day      "dies Dominica";/
+         "dies Lunae";/
+         "dies Martis";/
+         "dies Mercurii";/
+         "dies Iovis";/
+         "dies Veneris";/
+         "dies Sabbati"
+abmon    "Ian";/
+         "Feb";/
+         "Mar";/
+         "Apr";/
+         "Mai";/
+         "Iun";/
+         "Iul";/
+         "Aug";/
+         "Sep";/
+         "Oct";/
+         "Nov";/
+         "Dec"
+% Genetive case
+mon      "Ianuarii";/
+         "Februarii";/
+         "Martii";/
+         "Aprilis";/
+         "Maii";/
+         "Iunii";/
+         "Iulii";/
+         "Augusti";/
+         "Septembris";/
+         "Octobris";/
+         "Novembris";/
+         "Decembris"
+% Nominative case
+alt_mon  "Ianuarius";/
+         "Februarius";/
+         "Martius";/
+         "Aprilis";/
+         "Maius";/
+         "Iunius";/
+         "Iulius";/
+         "Augustus";/
+         "September";/
+         "October";/
+         "November";/
+         "December"
+d_t_fmt  "%a, %e %B %Y %I:%M"
+d_fmt    "%d.%m.%Y"
+t_fmt    "%T"
+am_pm    "a.m.";"p.m."
+t_fmt_ampm "%I:%M:%S %p"
+date_fmt "%a %d.%m.%Y %T %Z"
+week     7;19971130;4
+first_weekday 2
+END LC_TIME
+
+LC_MESSAGES
+yesexpr "^[+1SsYy]"
+noexpr  "^[-0Nn]"
+yesstr  "sic"
+nostr   "non"
+END LC_MESSAGES
+
+LC_PAPER
+copy "fi_FI"
+END LC_PAPER
+
+LC_TELEPHONE
+copy "fi_FI"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "fi_FI"
+END LC_MEASUREMENT
+
+LC_NAME
+copy "fi_FI"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt   "%f%N%d%N%b%N%a%N%s %h%t%e%t%r%N%z %T%N%c%N"
+country_ab2 "FI"
+country_ab3 "FIN"
+country_num 246
+country_name "Finlandia"
+country_post "FI"
+country_car  "FIN"
+country_isbn 952
+lang_name    "lingua latina"
+lang_ab      "la"
+lang_term    "lat"
+lang_lib     "lat"
+END LC_ADDRESS
