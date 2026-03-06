@@ -1,7 +1,7 @@
 # Latin Language Locale for GNU/Linux
 Due to glibc missing a Latin locale I decided to create one myself.
-I'm trying to make the locale as neutral as possible and avoid using formats
-associated with a particular era of Latin.
+I made the locale as neutral as possible, aiming to create a regionless locale
+similar to the Esperanto locale (eo).
 I stuck mostly with the i18n defaults, because most things specified in the 
 locale configuration are arbitrary for Latin. I used the [Unicode locale data 
 summary for Latin](https://www.unicode.org/cldr/charts/45/summary/la.html) 
@@ -15,6 +15,6 @@ want to represent dates in a more classical way using strftime's %O format modif
 If you want to install the locale, you can use the following commands:
 ```bash
 localedef -i la -f UTF-8 la.UTF-8
-# edit /etc/locale.gen and add the line "la UTF-8"
+# add the line "la UTF-8" to /usr/share/i18n/SUPPORTED and /etc/locale.gen
 locale-gen
 ```
