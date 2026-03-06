@@ -9,14 +9,18 @@ escape_char /
 % otherwise be governed by that license.
 
 % Latin Language Locale
-% Source: Oskari Ylönen
+% Source: Unicode CLDR https://www.unicode.org/cldr/charts/48/summary/la.html
+% Contact: Oskari Ylonen
 % Email: oskari.ylonen@iki.fi
 % Tel: 
 % Fax: 
 % Language: la
+% Territory:
 % Revision: 1.0
-% Date: 2024-4-22
+% Date: 2026-03-06
+% Application: general
 % Users: general
+% License: Public Domain
 
 LC_IDENTIFICATION
 title      "Latin language locale"
@@ -29,7 +33,7 @@ fax        ""
 language   "Latin"
 territory  ""
 revision   "draft"
-date       "2024-4-22"
+date       "2026-03-06"
 
 category "i18n:2012";LC_IDENTIFICATION
 category "i18n:2012";LC_CTYPE
@@ -62,6 +66,8 @@ copy "i18n"
 END LC_NUMERIC
 
 LC_TIME
+% Roman numerals 0-99
+% Allows for e.x. date "+%Od %B MM%Oy" -> VI Martii MMXXVI
 alt_digits  "N";"I";"II";"III";"IV";"V";/
             "VI";"VII";"VIII";"IX";"X";/
             "XI";"XII";"XIII";"XIV";"XV";/
@@ -103,7 +109,7 @@ abmon    "Ian";/
          "Oct";/
          "Nov";/
          "Dec"
-% Genetive case
+% Genetive case for date formatting
 mon      "Ianuarii";/
          "Februarii";/
          "Martii";/
@@ -116,7 +122,7 @@ mon      "Ianuarii";/
          "Octobris";/
          "Novembris";/
          "Decembris"
-% Nominative case
+% Nominative case for standalone month names
 alt_mon  "Ianuarius";/
          "Februarius";/
          "Martius";/
@@ -130,18 +136,19 @@ alt_mon  "Ianuarius";/
          "November";/
          "December"
 d_t_fmt  "%a %d %b %Y %T"
-d_fmt    "%F"
+d_fmt    "%Y-%m-%d"
 t_fmt    "%T"
+date_fmt "%a %d %b %Y %T %z"
 am_pm    "a.m.";"p.m."
 t_fmt_ampm "%I:%M:%S %p"
-date_fmt "%a %F %T %Z"
 week     7;19971130;4
 END LC_TIME
 
 LC_MESSAGES
-yesexpr "^[+1SsYy]"
+yesexpr "^[+1IiYy]"
 noexpr  "^[-0Nn]"
-yesstr  "sic"
+% CLDRv48 defines posix-yes as "ita"
+yesstr  "ita"
 nostr   "non"
 END LC_MESSAGES
 
@@ -162,5 +169,9 @@ copy "i18n"
 END LC_NAME
 
 LC_ADDRESS
-copy "i18n"
+% Postal format copied from i18n
+postal_fmt    "%a%N%f%N%d%N%b%N%s %h %e %r%N%C-%z %T%N%c%N"
+lang_name    "Latina"
+lang_ab      "la"
+lang_term    "lat"
 END LC_ADDRESS
